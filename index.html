@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Марс Клуб | Новокубанское — экспертные обзоры коньяка</title>
+    <meta name="description" content="Марс Клуб. Обзоры на алкоголь — честные дегустации коньяка, виски, сравнение французских, армянских и российских брендов. 820 видео, 24 млн просмотров.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e0cfbc;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .article-banner {
+            max-width: 980px;
+            width: 100%;
+            background: #fffaf3;
+            border-radius: 48px;
+            box-shadow: 0 30px 50px -20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.8);
+            overflow: hidden;
+            border: 1px solid #e8d5bc;
+        }
+
+        .article-inner {
+            padding: 48px 52px;
+        }
+
+        .brand-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            border-bottom: 2px solid #eedfc8;
+            padding-bottom: 20px;
+            margin-bottom: 28px;
+        }
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .brand-icon {
+            font-size: 2.4rem;
+            filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.1));
+        }
+        .brand-name {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            color: #2b291c;
+        }
+        .brand-name span {
+            color: #b47a41;
+        }
+        .expert-tag {
+            background: #e9d8c2;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #8b623b;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: #2b2a1e;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+        h1 a {
+            color: #b87a3a;
+            text-decoration: none;
+        }
+        h1 a:hover {
+            text-decoration: underline;
+        }
+        .lead {
+            font-size: 1rem;
+            color: #5c523b;
+            margin-bottom: 32px;
+            border-left: 3px solid #dfbc8c;
+            padding-left: 18px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .author-section {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+        .avatar-box {
+            flex-shrink: 0;
+            text-align: center;
+        }
+        .avatar-circle {
+            background: #ede0cf;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+            border: 2px solid #fff0e2;
+        }
+        .avatar-caption {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #a07d50;
+            margin-top: 8px;
+        }
+        .bio-text {
+            flex: 1;
+        }
+        .bio-text p {
+            margin-bottom: 18px;
+            line-height: 1.55;
+            color: #3c3726;
+            font-size: 0.95rem;
+        }
+
+        .full-article {
+            margin-top: 8px;
+        }
+        .full-article h2 {
+            font-size: 1.55rem;
+            margin: 28px 0 14px 0;
+            color: #2f2b1c;
+            font-weight: 600;
+            border-left: 4px solid #c1925c;
+            padding-left: 16px;
+        }
+        .full-article h3 {
+            font-size: 1.25rem;
+            margin: 22px 0 12px 0;
+            color: #9b6a3a;
+            font-weight: 600;
+        }
+        .full-article p {
+            margin-bottom: 18px;
+            line-height: 1.55;
+            color: #3f3a28;
+            font-size: 0.96rem;
+        }
+        .full-article ul, .full-article ol {
+            margin: 12px 0 20px 30px;
+            color: #3f3a28;
+        }
+        .full-article li {
+            margin: 6px 0;
+            line-height: 1.5;
+        }
+        .full-article a {
+            color: #b87a3a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #eedbbd;
+        }
+        .full-article a:hover {
+            border-bottom-color: #b87a3a;
+        }
+
+        .expert-cognacs {
+            background: #f6ede1;
+            border-radius: 28px;
+            padding: 22px 28px;
+            margin: 32px 0 28px;
+            border: 1px solid #ebd8be;
+        }
+        .expert-cognacs p {
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            color: #b47a41;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+        .cognac-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        .cognac-links a {
+            background: #ffffffdb;
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #5a3f22;
+            text-decoration: none;
+            border: 1px solid #e2cdad;
+            transition: all 0.2s;
+        }
+        .cognac-links a:hover {
+            background: #fff3e6;
+            border-color: #c19560;
+            color: #7b4f24;
+            transform: translateY(-1px);
+        }
+
+        .footer-note {
+            margin: 24px 0 32px 0;
+            padding: 16px 20px;
+            background: #fef7ef;
+            border-radius: 32px;
+            border: 1px solid #eedfc0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.8rem;
+            color: #ab8a5e;
+        }
+        .footer-note span {
+            font-weight: 400;
+        }
+        .footer-note a {
+            color: #946e41;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+        }
+        .footer-note a:hover {
+            border-bottom-color: #b47a41;
+            text-decoration: none;
+        }
+
+        @media (max-width: 720px) {
+            .article-inner {
+                padding: 28px 22px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .avatar-circle {
+                width: 70px;
+                height: 70px;
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="article-banner">
+    <div class="article-inner">
+        <div class="brand-head">
+            <div class="brand-logo">
+                <span class="brand-icon">🍇🥃</span>
+                <div class="brand-name">Новокубанское · <span>Марс Клуб</span></div>
+            </div>
+            <div class="expert-tag">82 тыс. подписчиков · 24 млн просмотров</div>
+        </div>
+
+        <h1><a href="https://www.youtube.com/@marsclub" target="_blank" rel="noopener noreferrer">Марс Клуб. Обзоры на алкоголь</a> – эксперт, блоги и обзоры коньяка</h1>
+        <div class="lead">«Марс Клуб. Обзоры на алкоголь» – канал с 82 тысячами подписчиков и почти 24 миллионами просмотров, созданный ещё в 2015 году. Автор посвящает свою жизнь изучению алкоголя и культуры пития.</div>
+
+        <div class="author-section">
+            <div class="avatar-box">
+                <div class="avatar-circle">🥃📺</div>
+                <div class="avatar-caption">Марс Клуб</div>
+            </div>
+            <div class="bio-text">
+                <p>«Марс Клуб. Обзоры на алкоголь» – это канал с 82 тысячами подписчиков и почти 24 миллионами просмотров, созданный еще в 2015 году. Автор проекта – настоящий эксперт, который посвящает свою жизнь изучению алкоголя и правил его употребления уже много лет.</p>
+                <p>Это канал для тех, кто хочет разбираться в напитках, а не просто пить. Здесь нет снобизма, есть честные обзоры, открытое мнение и дружеская атмосфера.</p>
+            </div>
+        </div>
+
+        <div class="full-article">
+            <h2>О блоге Марс Клуб. Обзоры на алкоголь</h2>
+            <p>Канал Марс Клуб был зарегистрирован 13 декабря 2015 года. За это время автор выпустил 820 видео, которые собрали почти 24 миллиона просмотров. Рейтинг проекта стабильно высок благодаря честности и глубине. Эксперт рассказывает о виски и о том, как правильно его пить, о коньяке и культуре его употребления, дегустирует вино и водку. Тема выбора напитка раскрывается с двух сторон: от технологии до житейских рекомендаций. Автор объясняет, чем солодовый виски отличается от блендового, что такое скотч, и чем французский коньяк отличается от российского или армянского. Образовательный блог Марс Клуб – это подкаст об алкогольном мире для взрослой аудитории.</p>
+
+            <h2>Стиль подачи и формат контента</h2>
+            <p>Стиль проекта – спокойный, мужской, без пафоса, но с чувством юмора. Автор не играет роль всезнающего гуру, а ведет диалог, делится личным опытом и мнением. Это интересный формат, где эксперт остается живым человеком и не смотрит свысока. Ключевые форматы канала:</p>
+            <p>● дегустация коньяка, виски, водки и других напитков с разбором органолептики;<br>
+            ● сравнение французского, армянского и российского коньяков в одном выпуске;<br>
+            ● обзор правил употребления: бокалы, температура, закуска;<br>
+            ● видео про коктейли и рецепты смешанных напитков.</p>
+            <p>Такой подход позволяет потребителю получать не сухую теорию, а практические советы. Каждое видео сопровождается честным мнением, основанным на реальном опыте автора.</p>
+
+            <h2>Площадки и каналы блогера</h2>
+            <p>Основная площадка проекта – YouTube, где и выходят полноценные видео про коньяк, виски и другие напитки. Автор активно ведет и другие ресурсы:<br>
+            ● Телеграм: канал для оперативных новостей и общения;<br>
+            ● ВКонтакте (группа): сообщество клуба для анонсов и обзоров;<br>
+            ● личная страница ВКонтакте: страница автора для обратной связи;<br>
+            ● Rutube: некоторые версии обзоров дублируются на эту площадку.</p>
+            <p>Подписавшись на Телеграм, вы не пропустите ни одного нового выпуска. Автор делится анонсами, отвечает на вопросы и дает советы по выбору напитков в магазине.</p>
+
+            <h2>Обзоры коньяков Новокубанское</h2>
+            <p>В рамках знакомства с российским коньячным производством эксперт Марс Клуб обратил внимание на продукцию Коньячного дома «Новокубанское». Например, выпуск «Российский коньяк Кубань 8» полностью посвящен продукции предприятия. Он собрал 4,4 тысячи просмотров, и их количество хоть и постепенно, но увеличивается.</p>
+
+            <!-- сноска -->
+            <div class="footer-note">
+                <span>🍇 Коньячный дом «Новокубанское» — традиции кубанского виноделия (с 1937 года)</span>
+                <a href="https://novokubanskoe.ru/catalog/" target="_blank" rel="noopener noreferrer">📖 Весь каталог коньяков →</a>
+                <a href="https://www.youtube.com/@marsclub" target="_blank" rel="noopener noreferrer">🎥 Смотреть обзоры Марс Клуб</a>
+            </div>
+
+            <h2>Популярные видео и обзоры</h2>
+            <p>Чтобы погрузиться в мир Марс Клуб, достаточно изучить подборку самых рейтинговых видео:<br>
+            1. Коньяк Hennessy. Обзор и дегустация.<br>
+            2. Армянский коньяк Ной 10 лет. 15 лет. 20 лет. 25 лет.<br>
+            3. Обзор коньяка «Арарат 5» и «Арарат 7».</p>
+            <p>Рейтинг этих видео стабильно высок, потому что автор отвечает на реальные вопросы потребителей. Мнение эксперта подкреплено многолетним опытом.</p>
+
+            <h2>Коньяк, который оценил эксперт</h2>
+            <p>Если вы ищете новый напиток для своего домашнего бара и доверяете мнению Марс Клуб, обратите внимание на коньяки Коньячного дома «Новокубанское». Мы предоставляем возможность приобрести эти позиции в своем онлайн-магазине. Находить для себя лучшие образцы – это всегда интересный процесс, особенно когда за плечами есть экспертная оценка. Одни из самых популярных позиций:</p>
+            <p>● <a href="https://novokubanskoe.ru/shop/kuban-4" target="_blank" rel="noopener noreferrer"><strong>«Кубань» 4 года</strong></a> – ординарный коньяк, в аромате виноград, переходящий в изюм, вкус повторяет аромат с непродолжительным сухим финишем;<br>
+            ● <a href="https://novokubanskoe.ru/shop/bolsoi-priz-3" target="_blank" rel="noopener noreferrer"><strong>«Большой Приз» 3 года</strong></a> – интересный образец с нотами винограда, абрикоса, инжира и запеченного яблока, на финише – курага и дубовая терпкость;<br>
+            ● <a href="https://novokubanskoe.ru/shop/n-nekrasov-15" target="_blank" rel="noopener noreferrer"><strong>«Н. Некрасов» 15 лет</strong></a> – коньяк класса КС, аромат которого ассоциируется с новогодней елкой и хвоей, затем переходит в сухофруктовый букет с черносливом и курагой.</p>
+            <p>Каждая марка заслуживает отдельного вечера и вдумчивой дегустации.</p>
+
+            <h2>Заключение</h2>
+            <p>Марс Клуб. Обзоры на алкоголь – это блог, который меняет взгляд на культуру пития. Автор помогает разбираться в алкогольном многообразии. Лучший способ поддержать его – подписаться на платформы, на которых он ведет блоги. Коньячный дом Новокубанское приглашает вас лично оценить качество своей продукции. Пробуйте, сравнивайте и составляйте собственное впечатление.</p>
+        </div>
+
+        <div class="expert-cognacs">
+            <p>🍇 КОНЬЯКИ, ПОЛУЧИВШИЕ ВЫСОКУЮ ОЦЕНКУ ЭКСПЕРТА</p>
+            <div class="cognac-links">
+                <a href="https://novokubanskoe.ru/shop/kuban-4" target="_blank" rel="noopener noreferrer">«Кубань» 4 года</a>
+                <a href="https://novokubanskoe.ru/shop/bolsoi-priz-3" target="_blank" rel="noopener noreferrer">«Большой Приз» 3 года</a>
+                <a href="https://novokubanskoe.ru/shop/n-nekrasov-15" target="_blank" rel="noopener noreferrer">«Н. Некрасов» 15 лет (КС)</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
